@@ -1,1 +1,0 @@
-genhtml coverage_total.info --branch-coverage --output-directory lcov
