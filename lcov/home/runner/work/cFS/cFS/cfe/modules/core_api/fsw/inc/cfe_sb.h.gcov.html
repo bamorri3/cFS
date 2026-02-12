@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2026-02-12 04:01:32</td>
+            <td class="headerValue">2026-02-12 04:04:19</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -859,9 +859,9 @@
 <span id="L788"><span class="lineNum">     788</span>                 :             :  * \retval true  Message IDs are Equal</span>
 <span id="L789"><span class="lineNum">     789</span>                 :             :  * \retval false Message IDs are not Equal</span>
 <span id="L790"><span class="lineNum">     790</span>                 :             :  */</span>
-<span id="L791"><span class="lineNum">     791</span>                 :<span class="tlaGNC tlaBgGNC">           5 : static inline bool CFE_SB_MsgId_Equal(CFE_SB_MsgId_t MsgId1, CFE_SB_MsgId_t MsgId2)</span></span>
+<span id="L791"><span class="lineNum">     791</span>                 :<span class="tlaGNC tlaBgGNC">          15 : static inline bool CFE_SB_MsgId_Equal(CFE_SB_MsgId_t MsgId1, CFE_SB_MsgId_t MsgId2)</span></span>
 <span id="L792"><span class="lineNum">     792</span>                 :             : {</span>
-<span id="L793"><span class="lineNum">     793</span>                 :<span class="tlaGNC">           5 :     return CFE_SB_MSGID_UNWRAP_VALUE(MsgId1) == CFE_SB_MSGID_UNWRAP_VALUE(MsgId2);</span></span>
+<span id="L793"><span class="lineNum">     793</span>                 :<span class="tlaGNC">          15 :     return CFE_SB_MSGID_UNWRAP_VALUE(MsgId1) == CFE_SB_MSGID_UNWRAP_VALUE(MsgId2);</span></span>
 <span id="L794"><span class="lineNum">     794</span>                 :             : }</span>
 <span id="L795"><span class="lineNum">     795</span>                 :             : </span>
 <span id="L796"><span class="lineNum">     796</span>                 :             : /*****************************************************************************/</span>
@@ -890,9 +890,9 @@
 <span id="L819"><span class="lineNum">     819</span>                 :             :  *</span>
 <span id="L820"><span class="lineNum">     820</span>                 :             :  * \return Integer representation of the #CFE_SB_MsgId_t</span>
 <span id="L821"><span class="lineNum">     821</span>                 :             :  */</span>
-<span id="L822"><span class="lineNum">     822</span>                 :<span class="tlaGNC">           6 : static inline CFE_SB_MsgId_Atom_t CFE_SB_MsgIdToValue(CFE_SB_MsgId_t MsgId)</span></span>
+<span id="L822"><span class="lineNum">     822</span>                 :<span class="tlaGNC">          18 : static inline CFE_SB_MsgId_Atom_t CFE_SB_MsgIdToValue(CFE_SB_MsgId_t MsgId)</span></span>
 <span id="L823"><span class="lineNum">     823</span>                 :             : {</span>
-<span id="L824"><span class="lineNum">     824</span>                 :<span class="tlaGNC">           6 :     return CFE_SB_MSGID_UNWRAP_VALUE(MsgId);</span></span>
+<span id="L824"><span class="lineNum">     824</span>                 :<span class="tlaGNC">          18 :     return CFE_SB_MSGID_UNWRAP_VALUE(MsgId);</span></span>
 <span id="L825"><span class="lineNum">     825</span>                 :             : }</span>
 <span id="L826"><span class="lineNum">     826</span>                 :             : </span>
 <span id="L827"><span class="lineNum">     827</span>                 :             : /*****************************************************************************/</span>
@@ -919,10 +919,10 @@
 <span id="L848"><span class="lineNum">     848</span>                 :             :  *</span>
 <span id="L849"><span class="lineNum">     849</span>                 :             :  * \return #CFE_SB_MsgId_t representation of the integer</span>
 <span id="L850"><span class="lineNum">     850</span>                 :             :  */</span>
-<span id="L851"><span class="lineNum">     851</span>                 :<span class="tlaGNC">          23 : static inline CFE_SB_MsgId_t CFE_SB_ValueToMsgId(CFE_SB_MsgId_Atom_t MsgIdValue)</span></span>
+<span id="L851"><span class="lineNum">     851</span>                 :<span class="tlaGNC">          99 : static inline CFE_SB_MsgId_t CFE_SB_ValueToMsgId(CFE_SB_MsgId_Atom_t MsgIdValue)</span></span>
 <span id="L852"><span class="lineNum">     852</span>                 :             : {</span>
-<span id="L853"><span class="lineNum">     853</span>                 :<span class="tlaGNC">          23 :     CFE_SB_MsgId_t Result = CFE_SB_MSGID_WRAP_VALUE(MsgIdValue);</span></span>
-<span id="L854"><span class="lineNum">     854</span>                 :<span class="tlaGNC">          23 :     return Result;</span></span>
+<span id="L853"><span class="lineNum">     853</span>                 :<span class="tlaGNC">          99 :     CFE_SB_MsgId_t Result = CFE_SB_MSGID_WRAP_VALUE(MsgIdValue);</span></span>
+<span id="L854"><span class="lineNum">     854</span>                 :<span class="tlaGNC">          99 :     return Result;</span></span>
 <span id="L855"><span class="lineNum">     855</span>                 :             : }</span>
 <span id="L856"><span class="lineNum">     856</span>                 :             : </span>
 <span id="L857"><span class="lineNum">     857</span>                 :             : /*****************************************************************************/</span>
